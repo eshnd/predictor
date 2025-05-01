@@ -1,14 +1,6 @@
 import math
 import random
 
-datapoints = [ # features, output, reward
-    [1, 2, 7, 13, 18],
-    [2, 5, 11, 17, 19],
-    [7, 6, 12, 14, 21]
-]
-
-input_features = [8, 9, 14] # features
-
 def narwhal(input_features, datapoints_old): 
     datapoints = datapoints_old
     combined = []
