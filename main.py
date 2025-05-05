@@ -16,7 +16,7 @@ if os.path.exists(DATA):
     prediction = narwhal.narwhal([sage.get_price(action), sage.get_market_cap(action), sage.get_market_open(action), sage.get_time()], DATA)
     print("NARwhaL prediction: " + prediction)
     record = input("Do you want to record results? (y/n) ")
-    if record = "y":
+    if record == "y":
         length = input("How long do you want to wait before recording (minutes)? ")
         time.sleep(length*60)
         grade = input("How would you grade this stock out of 100? ")
@@ -25,8 +25,8 @@ if os.path.exists(DATA):
             pickle.dump(existing_data, f)
 else:
     log_stuff = input("No data found?? Do you want to log data? (y/n) ")
-    if log_stuff = "y":
-        num_logs = input("How many datapoints do you want to log? ")
+    if log_stuff == "y":
+        num_logs = int(input("How many datapoints do you want to log? "))
         for i in range(num_logs):
             price = input("Price: ")
             mktcap = input("Market Cap: ")
